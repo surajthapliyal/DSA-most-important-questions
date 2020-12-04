@@ -38,7 +38,6 @@ public class slidingWindowMaximum {
             Deque<Integer> dq = new LinkedList<>();
             int i = 0;
             
-            // for first window:
             for(;i<n;i++){
                 if(i<k){
                     // if new element to be added is large than the element in the last of the deque
