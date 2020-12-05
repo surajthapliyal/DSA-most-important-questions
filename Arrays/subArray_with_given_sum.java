@@ -73,7 +73,7 @@ public class subArray_with_given_sum {
         for(int each : s){
             s.add(sum);
             sum += each;
-            if(s.contains(k)){
+            if(s.contains(sum-k)){
                 ans = true;
                 break;
             }
