@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class subArray_with_given_sum {
     public static void main(String[] args) {
@@ -10,7 +10,8 @@ public class subArray_with_given_sum {
         }
 
         int s = sc.nextInt();
-        twoPointers(a, s);
+        // twoPointers(a, s);
+        usingSets(a, s);
         sc.close();
     }
 
@@ -65,23 +66,18 @@ public class subArray_with_given_sum {
         }
         System.out.println(st+" "+en);
     }
+    static void usingSets(int a[],int k){
+        Set<Integer> s = new HashSet<>();
+        int sum = 0;
+        boolean ans = false;
+        for(int each : s){
+            s.add(sum);
+            sum += each;
+            if(s.contains(k)){
+                ans = true;
+                break;
+            }
+        }
+        System.out.println(ans);
+    }
 }
-//  int currSum = 0,start = 0;
-//         for(int i=0;i<a.length;i++){
-//             currSum += a[i];
-//             if(currSum > sum){
-//                 while (currSum > sum) {
-//                     currSum=currSum-a[start];
-//                     start++;
-//                 }
-//                 if(currSum == sum) {
-//                     System.out.println(start + " " + (i+1));
-//                     return;
-//                 }
-//             }
-//             if(currSum == sum){
-//                 System.out.println((start+1)+" "+(i+1));
-//                 return;
-//             }
-//         }
-//         System.out.println("Not found");
