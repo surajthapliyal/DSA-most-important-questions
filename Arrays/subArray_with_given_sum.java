@@ -69,6 +69,7 @@ public class subArray_with_given_sum {
     static void usingSets(int a[],int k){
         Set<Integer> s = new HashSet<>();
         int sum = 0;
+        
         boolean ans = false;
         for(int each : s){
             s.add(sum);
