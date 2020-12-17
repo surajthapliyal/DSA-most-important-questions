@@ -2,5 +2,8 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="LinkedLists"/>
+	<classpathentry kind="src" path="Stacks"/>
+	<classpathentry kind="src" path="Arrays"/>
+	<classpathentry kind="src" path="HashMaps"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
