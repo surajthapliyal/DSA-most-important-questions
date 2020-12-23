@@ -5,5 +5,6 @@
 	<classpathentry kind="src" path="Stacks"/>
 	<classpathentry kind="src" path="Arrays"/>
 	<classpathentry kind="src" path="HashMaps"/>
+	<classpathentry kind="src" path="RecursionAndBacktracking"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
