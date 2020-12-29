@@ -26,15 +26,16 @@ public class partitionAnArrayIntoTwoEqualSumArrays {
         // or if the sum given is less than 0:
         if(i>=a.length || sum < 0) return false;
         if(sum==0) return true;
-        
+
         ans.add(a[i]);
 
         boolean leftPossible = partition(a, sum-a[i], ++i, ans);
         if(leftPossible) return true;
 
-        // if left side is not possible then remove the element which is added in the list:(backtrack)
+        // if adding it to the one half wont work for the solution then remove it 
+        // from that half and removing it from the half is means that it will be the
+        // solution for the another half :(backtrack)
         ans.remove(ans.size()-1);
-        // now check for the right side :
         return partition(a, sum, ++i, ans);
     }
 }
